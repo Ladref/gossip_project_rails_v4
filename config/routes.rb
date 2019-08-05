@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profile/:id', to: "profile#index"
   get 'gossip_url/:id', to: "gossip_url#page"
   get '/welcome/:first_name', to: 'welcome#index'
   get '/user/index'
