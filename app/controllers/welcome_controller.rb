@@ -1,5 +1,12 @@
 class WelcomeController < ApplicationController
+  
   def index
-    @first_name = params[:first_name]
+  end
+
+  def show
+    @id = params[:id].to_i
+    puts "#{@id}"
+    @first_name = User.find(@id).first_name
+    puts "#{@first_name}"
   end
 end

@@ -1,0 +1,6 @@
+<h1>Gossip show details</h1>
+
+<h3>Gossip #<%= @gossip.id %> : <%= @gossip.title %></h3>
+<p>By <%= link_to "#{@gossip.user.first_name} #{@gossip.user.last_name}", "/user/#{@gossip.user.id+1}" %> from <%= @gossip.user.city.name%></p>
+<q><%= @gossip.content %></q><br><br>
+<p>Created : <%= @gossip.created_at %></p>

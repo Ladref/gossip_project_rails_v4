@@ -16,6 +16,6 @@ end
 
 20.times do
     gossip = Gossip.create(title: Faker::Marketing.buzzwords, content: Faker::Quote.yoda, user_id: rand(1..10))
-    Tagging.create!(gossip_id: gossip.id, tag_id: rand(1..10))
+    Tagging.create(gossip_id: Gossip.all.sample, tag_id: Tag.all.sample)
     PrivateMessage.create!(content: Faker::Lorem.paragraphs(number: 1)[0])
 end

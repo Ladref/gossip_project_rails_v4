@@ -22,9 +22,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" <%= link_to "Home", "/home"%> <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" <%= link_to "Team", "/team"%></a>
-        <a class="nav-item nav-link" <%= link_to "Contact", "/contact"%></a>
+        <a class="nav-item nav-link active" <%= link_to "Home", home_index_path%> <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" <%= link_to "Team", team_index_path%></a>
+        <a class="nav-item nav-link" <%= link_to "Contact", contact_index_path%></a>
+        <a class="nav-item nav-link" <%= link_to "New Gossip", new_gossip_path%></a>
       </div>
     </div>
   </nav>

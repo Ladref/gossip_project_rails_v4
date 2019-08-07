@@ -1,0 +1,31 @@
+<h1>Gossips index page</h1>
+
+<div class="table-responsive">
+
+<table class="table table-striped text-nowrap">
+
+  <thead>
+    <tr>
+      <th scope="col" class="col-sm-3">Author</th>
+      <th scope="col" class="col-sm-6">Title</th>
+      <th scope="col" class="col-sm-3">Link</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% index = 0 %>
+    <% while index < (@gossip_array.length) do %>
+        <tr>
+            <td> <%= @gossip_array[index].user.first_name %> </td>
+            <td> <%= @gossip_array[index].title %> </td>
+            <td> <%= link_to "Read gossip", "#{gossips_path}/#{@gossip_array[index].id}" %> | <%= link_to "Edit gossip", "#{edit_gossip_path(@gossip_array[index].id)}" %></td>
+        </tr>
+        <% index  = index + 1 %>
+    <% end %>
+
+  </tbody>
+
+</table>
+
+</div>

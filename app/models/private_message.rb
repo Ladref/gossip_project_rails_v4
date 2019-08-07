@@ -1,2 +1,3 @@
 class PrivateMessage < ApplicationRecord
+
 end
