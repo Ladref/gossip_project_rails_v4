@@ -12,6 +12,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
+
+  <body>
+    <!-- Navbar content -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" <%= link_to "The Gossip Project", "/"%> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" <%= link_to "Home", home_index_path%> <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" <%= link_to "Team", team_index_path%></a>
+        <a class="nav-item nav-link" <%= link_to "Contact", contact_index_path%></a>
+        <a class="nav-item nav-link" <%= link_to "New Gossip", new_gossip_path%></a>
+    </div>
+        <div class="btn btn-outline-primary">
+          <%= link_to "Register", new_user_path, class: "btn-outline-primary" %>
+        </div>
+        <div class="btn btn-outline-success">
+          <%= link_to "Log in", new_session_path, class: "btn-outline-success" %>
+        </div>
+  </nav>
+  <%= yield %>
+  </body>
+</html>
+
+
+
+
+
+
+
+VERSION 2
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheGossipProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
   <body>
     <!-- Navbar content -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

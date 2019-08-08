@@ -8,15 +8,10 @@
 </head>
 <body>
 
-  <% if params[:id] == "n" %>
-    <% puts params[:id] %>
-   <div class="alert alert-success alert-dismissible">
-      <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong>Thank you!</strong> You've just published a new gossip.
-    </div>
-  <% end %>
+  <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4">List of all gossips</h1>
+  </div>
 
-<h1>List of all gossips</h1>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -25,6 +20,7 @@
         <th>Link</th>
       </tr>
     </thead>
+
     <tbody>
       <%id = 0%>
       <% @gossips.each do |gossip| %>
@@ -36,6 +32,7 @@
       </tr>
       <% end %>
     </tbody>
+
   </table>
 
 </body>

@@ -26,11 +26,13 @@ class GossipsController < ApplicationController
                          content: params[:content],
                          user_id: 1)
     if @gossip.save
-      redirect_to '/home/n'
+      flash[:success] = "The gossip has been saved."
+      redirect_to @gossip
     else
       render 'new'
     end
   end
+
 
 
   def edit

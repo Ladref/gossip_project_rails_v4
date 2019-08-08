@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <!-- ... -->
+
+<h1>User#index</h1>
+
+
+    <%= form_tag url_for(action: "create"), method: "post" do %>
+        <%= label_tag 'First_name' %> <br />
+        <%= text_field_tag 'first_name', @user.first_name %>
+        <br /> <br />
+
+        <%= label_tag 'Last_name' %> <br />
+        <%= text_field_tag 'last_name',  @user.last_name %>
+        <br /> <br />
+
+        <%= label_tag 'Email' %> <br />
+        <%= text_field_tag 'email', @user.email %>
+        <br /> <br />
+
+        <%= label_tag 'Password' %><br />
+        <%= text_field_tag 'password', @user.password %>
+        <br /> <br />
+
+        <%= label_tag 'Password_confirmation' %><br />
+        <%= text_field_tag 'password_confirmation', @user.password_confirmation  %>
+        <br /> <br />
+
+        <%= submit_tag "Submit gossip" %>
+    <% end %>
